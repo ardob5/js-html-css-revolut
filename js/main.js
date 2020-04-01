@@ -4,7 +4,7 @@
 $('.navigation-menu').mouseenter(
   function(){
     $('.dropDown-menu').hide();
-    $(this).next().toggle();
+    $(this).next().slideToggle();
   }
 );
 
@@ -14,8 +14,8 @@ $('body').click(
   }
 )
 
-// $('.navigation-menu').mouseleave(
+// $('burger-menu').click(
 //   function(){
-//     $('.dropDown-menu').hide();
+//     $(this').next().toggle();
 //   }
 // )

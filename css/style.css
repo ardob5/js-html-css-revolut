@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: purple;
+  background-color: #e6e6e6;
 }
 
 a {
@@ -21,24 +21,32 @@ a:hover {
 }
 
 .menu {
-  padding: 20px;
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.left-navbar {
+  background-color: #FFF;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.left-navbar h2 {
+.main-navbar {
+  padding: 20px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.main-navbar ul {
+.burger-menu {
+  display: none;
+}
+
+
+.logo {
+  width: 10%;
+  text-align: center;
+}
+
+.menu ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -54,7 +62,7 @@ ul > li {
   padding: 10px;
   border-radius: 5px;
   background-color: #FFF;
-  margin-top: 30px;
+  margin-top: 25px;
   position: absolute;
   top: 100%;
   left: 50%;
@@ -71,4 +79,34 @@ ul > li {
 
 .dropDown-menu ul > li {
   margin: 5px 0;
+}
+
+.inactive {
+  display: none;
+}
+
+
+@media all and (max-width: 900px) {
+
+  .right-list, .left-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-navbar ul {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .burger-menu i {
+    font-size: 1.6em;
+  }
+
+  .inactive {
+    display: block;
+  }
 }
